@@ -1,8 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://tb32amp6f62k"]
+[gd_scene load_steps=3 format=3 uid="uid://lcto3iw7hv37"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_ut4yy"]
-
-[sub_resource type="Theme" id="Theme_lcb0i"]
+[ext_resource type="Texture2D" uid="uid://cjvy21r1jb5ky" path="res://tiles_in_grid.png" id="2_s5kcj"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,6 +13,15 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ut4yy")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D"]
+offset_left = -951.0
+offset_top = -536.0
+offset_right = 969.0
+offset_bottom = 544.0
+texture = ExtResource("2_s5kcj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -32,8 +40,6 @@ grow_vertical = 2
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../QuitButton")
-theme = SubResource("Theme_lcb0i")
-theme_type_variation = &"FlatButton"
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
