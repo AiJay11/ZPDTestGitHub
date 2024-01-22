@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjvy21r1jb5ky"
-path="res://.godot/imported/tiles_in_grid.png-e691864c83833ba6fe1c5567ce1f091d.ctex"
+uid="uid://dqg8ymqrwm8f0"
+path="res://.godot/imported/tiles_in_grid.png-f7337861c330e7c7d9d973fe478aea4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles_in_grid.png"
-dest_files=["res://.godot/imported/tiles_in_grid.png-e691864c83833ba6fe1c5567ce1f091d.ctex"]
+source_file="res://assets/tiles_in_grid.png"
+dest_files=["res://.godot/imported/tiles_in_grid.png-f7337861c330e7c7d9d973fe478aea4c.ctex"]
 
 [params]
 
