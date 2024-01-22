@@ -1,4 +1,6 @@
-Sprite2D
+TextureRect
+Node2D
 Window
+Sprite2D
 Button
 VBoxContainer
