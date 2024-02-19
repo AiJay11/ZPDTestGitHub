@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://byhckqyi3p6ty"]
+
+[node name="Level" type="Node"]
+
+[node name="Services" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="Services"]
+
+[node name="Node2" type="Node" parent="Services"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Combatants" type="Node2D" parent="."]
+
+[node name="player1 Combatants" type="Node2D" parent="Combatants"]
+
+[node name="Unit" type="Node2D" parent="Combatants/player1 Combatants"]
+
+[node name="player2 Combatants2" type="Node2D" parent="Combatants"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+tooltip_text = "balls"

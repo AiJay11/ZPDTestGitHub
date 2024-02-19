@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bj7ttgrwbc3aq"]
+
+[node name="Unit" type="Node2D"]
+
+[node name="Controllers" type="Node" parent="."]
+
+[node name="Action Controller" type="Node" parent="Controllers"]
+
+[node name="Stats Controller" type="Node" parent="Controllers"]
+
+[node name="Animation Controller" type="AnimationPlayer" parent="Controllers"]
+
+[node name="Action overrides" type="Node" parent="."]
+
+[node name="Movement override" type="Node" parent="Action overrides"]
