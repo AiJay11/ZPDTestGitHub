@@ -1,11 +1,1 @@
-res://menu.tscn
-res://Menu.gd
-res://Godot Game/menu.tscn
-res://Godot Game/gameTest.gd
-res://Godot Game/options.gd
-res://Godot Game/options.tscn
-res://scenes/Menu.tscn
-res://scenes/options.tscn
-res://Scripts/Menu.gd
-res://Scripts/Options.gd
-res://scenes/Options.tscn
+res://scenes/unit.tscn
