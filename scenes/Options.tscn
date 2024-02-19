@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://43mbhhiifoc2"]
+
+[ext_resource type="Script" path="res://Scripts/Options.gd" id="1_t825q"]
+[ext_resource type="Texture2D" uid="uid://dqg8ymqrwm8f0" path="res://assets/tiles_in_grid.png" id="2_o4cv3"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t825q")
+
+[node name="TilesInGrid" type="Sprite2D" parent="."]
+position = Vector2(579.5, 324.5)
+scale = Vector2(0.608854, 0.613889)
+texture = ExtResource("2_o4cv3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -73.0
+offset_right = 57.0
+offset_bottom = -41.0
+grow_vertical = 0
+scale = Vector2(2, 2)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
