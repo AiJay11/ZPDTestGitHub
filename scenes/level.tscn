@@ -1,26 +1,11 @@
-[gd_scene format=3 uid="uid://byhckqyi3p6ty"]
+[gd_scene load_steps=3 format=3 uid="uid://mtui4r4wjgdb"]
 
-[node name="Level" type="Node"]
+[ext_resource type="PackedScene" uid="uid://o8ciwo5bckwf" path="res://scenes/tile_map.tscn" id="1_mj2d6"]
+[ext_resource type="Script" path="res://scenes/Camera2D.gd" id="2_74113"]
 
-[node name="Services" type="Node" parent="."]
+[node name="Level" type="Node2D"]
 
-[node name="Node" type="Node" parent="Services"]
+[node name="TileMap" parent="." instance=ExtResource("1_mj2d6")]
 
-[node name="Node2" type="Node" parent="Services"]
-
-[node name="Environment" type="Node2D" parent="."]
-
-[node name="Combatants" type="Node2D" parent="."]
-
-[node name="player1 Combatants" type="Node2D" parent="Combatants"]
-
-[node name="Unit" type="Node2D" parent="Combatants/player1 Combatants"]
-
-[node name="player2 Combatants2" type="Node2D" parent="Combatants"]
-
-[node name="UI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-tooltip_text = "balls"
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_74113")

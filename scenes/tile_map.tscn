@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://o8ciwo5bckwf"]
+
+[ext_resource type="Texture2D" uid="uid://docxagmp4q2vd" path="res://assets/tile set.png" id="1_6aoq1"]
+[ext_resource type="Texture2D" uid="uid://3h8c1wni1xdw" path="res://assets/selected tile trans.png" id="2_8p1r2"]
+[ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_1efy8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o31l"]
+texture = ExtResource("1_6aoq1")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bbktw"]
+texture = ExtResource("2_8p1r2")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_50pqr"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_7o31l")
+sources/2 = SubResource("TileSetAtlasSource_bbktw")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_50pqr")
+rendering_quadrant_size = 32
+format = 2
+layer_1/tile_data = PackedInt32Array()
+layer_2/tile_data = PackedInt32Array()
+script = ExtResource("3_1efy8")
