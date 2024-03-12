@@ -8,4 +8,5 @@
 [node name="TileMap" parent="." instance=ExtResource("1_mj2d6")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(578, 326)
 script = ExtResource("2_74113")

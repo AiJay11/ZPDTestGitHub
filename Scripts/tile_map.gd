@@ -6,10 +6,11 @@ var dic = {}
 
 func _ready():
 	
-	for x in GrisizeX:
+	for x in GrisizeX: #generates tiles and asigns each with a dictonary
 		for y in GrisizeY:
 			dic[str(Vector2(x,y))] = {
-				"Type": "base_tile"
+				"Type": "base_tile",
+				"Location": Vector2(x,y)
 			}
 			set_cell(0,Vector2(x,y),0,Vector2i(randi()%2,randi()%2),0)
 			
@@ -22,3 +23,5 @@ func _process(_delta):
 	
 	if dic.has(str(tile)):
 		set_cell(2,tile,2,Vector2i(0,0),0)
+		if Input.is_action_just_pressed("click"):
+			set_cell(1,tile,0,Vector2i(0,0),0)
