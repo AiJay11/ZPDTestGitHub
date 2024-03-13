@@ -1,7 +1,8 @@
-res://scenes/level.tscn
 res://scenes/Menu.tscn
 res://scenes/Options.tscn
 res://scenes/level_blueprint.tscn
 res://scenes/unit_blueprint.tscn
 res://scenes/tile_map.tscn
-res://scripts/tile_map.gd
+res://scenes/level.tscn
+res://scenes/Camera2D.gd
+res://Scripts/Camera2D.gd
