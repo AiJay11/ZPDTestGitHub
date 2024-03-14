@@ -1,17 +1,16 @@
 extends TileMap
 
-var GrisizeX = 20
-var GrisizeY = 10
-var dic = {}
+var GrisizeX = 20 #tiek lietots random kartes izveidē
+var GrisizeY = 15 #tiek lietots random kartes izveidē
+var dic = {} #tiek lietots abos kartes izveides gadījumos
 
 func _ready():
 	if get_used_cells(0) == []:
-		
 		#print("halo")
 		for x in GrisizeX: #generates tiles and asigns each with a dictonary
 			for y in GrisizeY:
 				dic[str(Vector2(x,y))] = {
-					"Type": "base_tile",
+					"Type": "random_tile",
 					"Location": Vector2(x,y)
 				}
 				set_cell(0,Vector2(x,y),0,Vector2i(randi()%2,randi()%2),0)
@@ -31,13 +30,12 @@ func _process(_delta):
 		if Input.is_action_just_pressed("click"):
 			set_cell(1,tile,0,Vector2i(2,1),0)
 			
-#func tiles_to_dic(type,atlas): # jāizdomā veids kā padarīt modulāru
-	#for tile in type:
-		#dic[str(tile)] = {
-					#"Type": str(type),
-					#"Location": tile
-				#}
-		#set_cell(0,tile,0,atlas,0)
+func tiles_to_dic(type,atlas,location): # jāizdomā veids kā padarīt modulāru
+	dic[str(location)] = {
+				"Type": str(type),
+				"Location": location
+				}
+	set_cell(0,location,0,atlas,0)
 	
 func recreate_map():
 	var grass = get_used_cells_by_id(0,0,Vector2i(0,0),0)
@@ -45,26 +43,10 @@ func recreate_map():
 	var mountain = get_used_cells_by_id(0,0,Vector2i(0,1),0)
 	var forrest = get_used_cells_by_id(0,0,Vector2i(1,1),0)
 	for tile in grass:
-		dic[str(tile)] = {
-					"Type": "grass",
-					"Location": tile
-				}
-		set_cell(0,tile,0,Vector2i(0,0),0)
+		tiles_to_dic(grass,Vector2i(0,0),tile)
 	for tile in water:
-		dic[str(tile)] = {
-				"Type": "water",
-				"Location": tile
-			}
-		set_cell(0,tile,0,Vector2i(1,0),0)
+		tiles_to_dic(water,Vector2i(1,0),tile)
 	for tile in mountain:
-		dic[str(tile)] = {
-				"Type": "mountain",
-				"Location": tile
-			}
-		set_cell(0,tile,0,Vector2i(0,1),0)
+		tiles_to_dic(mountain,Vector2i(0,1),tile)
 	for tile in forrest:
-		dic[str(tile)] = {
-				"Type": "forrest",
-				"Location": tile
-			}
-		set_cell(0,tile,0,Vector2i(1,1),0)
+		tiles_to_dic(forrest,Vector2i(1,1),tile)
