@@ -23,5 +23,5 @@ func _process(delta):
 	var zoom_change = camera_zoom_speed * zoom_direction * delta 
 	var zoom_actual = clamp(zoom + Vector2(zoom_change,zoom_change),Vector2(min_zoom,min_zoom),Vector2(max_zoom,max_zoom))
 	zoom = zoom_actual
-	camera_move_speed /= zoom_actual.x
+	
 	
