@@ -16,8 +16,8 @@ func _process(delta):
 	position += input * camera_move_speed * delta
 	
 	var camera_zoom_speed = 2
-	var min_zoom = 0.5
-	var max_zoom = 10
+	var min_zoom = 1
+	var max_zoom = 9
 	var zoom_direction 
 	zoom_direction = Input.get_axis("zoom_out","zoom_in")
 	var zoom_change = camera_zoom_speed * zoom_direction * delta 

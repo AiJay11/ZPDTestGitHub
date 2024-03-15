@@ -1,0 +1,126 @@
+[gd_scene load_steps=3 format=3 uid="uid://43mbhhiifoc2"]
+
+[ext_resource type="Script" path="res://Scripts/Options.gd" id="1_t825q"]
+[ext_resource type="Texture2D" uid="uid://dqg8ymqrwm8f0" path="res://assets/tiles_in_grid.png" id="2_o4cv3"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t825q")
+
+[node name="TilesInGrid" type="Sprite2D" parent="."]
+position = Vector2(579.5, 324.5)
+scale = Vector2(0.608854, 0.613889)
+texture = ExtResource("2_o4cv3")
+
+[node name="OptionsContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 141.0
+offset_right = 464.0
+offset_bottom = 308.0
+
+[node name="MasterVolumeContainer" type="HBoxContainer" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="Master Volume" type="Label" parent="OptionsContainer/MasterVolumeContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="MasterVolumeSlider" type="HSlider" parent="OptionsContainer/MasterVolumeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="MusicVolumeContainer" type="HBoxContainer" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="Music Volume" type="Label" parent="OptionsContainer/MusicVolumeContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Music Volume"
+
+[node name="MusicVolumeSlider" type="HSlider" parent="OptionsContainer/MusicVolumeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="DisplayModeLabel" type="Label" parent="OptionsContainer/HBoxContainer"]
+layout_mode = 2
+text = "Display Mode"
+
+[node name="DisplayModeOption" type="Button" parent="OptionsContainer/HBoxContainer"]
+layout_mode = 2
+text = "DisplayModeOption"
+
+[node name="VSyncContainer" type="HBoxContainer" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="VSyncLabel" type="Label" parent="OptionsContainer/VSyncContainer"]
+layout_mode = 2
+text = "V-Sync"
+
+[node name="VSyncCheckbox" type="CheckBox" parent="OptionsContainer/VSyncContainer"]
+layout_mode = 2
+
+[node name="LanguageContainer" type="HBoxContainer" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="LanguageLabel" type="Label" parent="OptionsContainer/LanguageContainer"]
+layout_mode = 2
+text = "Language"
+
+[node name="LanguageOption" type="Button" parent="OptionsContainer/LanguageContainer"]
+layout_mode = 2
+text = "LanguageOption"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -251.0
+offset_top = -77.0
+offset_right = -199.0
+offset_bottom = -46.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+
+[node name="ApplyButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Apply"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.878472
+anchor_top = 0.87963
+anchor_right = 0.967014
+anchor_bottom = 1.00309
+offset_left = 17.0
+offset_right = -34.0
+offset_bottom = -40.0
+scale = Vector2(2, 2)
+
+[node name="ResetButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+text = "Reset"
+
+[connection signal="changed" from="OptionsContainer/MasterVolumeContainer/MasterVolumeSlider" to="." method="_on_master_volume_slider_changed"]
+[connection signal="changed" from="OptionsContainer/MusicVolumeContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_changed"]
+[connection signal="pressed" from="OptionsContainer/HBoxContainer/DisplayModeOption" to="." method="_on_display_mode_option_pressed"]
+[connection signal="pressed" from="OptionsContainer/VSyncContainer/VSyncCheckbox" to="." method="_on_v_sync_checkbox_pressed"]
+[connection signal="pressed" from="OptionsContainer/LanguageContainer/LanguageOption" to="." method="_on_language_option_pressed"]
+[connection signal="pressed" from="VBoxContainer/ApplyButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/ResetButton" to="." method="_on_button_pressed"]

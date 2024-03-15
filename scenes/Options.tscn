@@ -1,46 +1,162 @@
-[gd_scene load_steps=3 format=3 uid="uid://43mbhhiifoc2"]
+[gd_scene load_steps=2 format=3 uid="uid://43mbhhiifoc2"]
 
 [ext_resource type="Script" path="res://Scripts/Options.gd" id="1_t825q"]
-[ext_resource type="Texture2D" uid="uid://dqg8ymqrwm8f0" path="res://assets/tiles_in_grid.png" id="2_o4cv3"]
 
-[node name="Options" type="Control"]
+[node name="SettingsMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 920.0
+offset_bottom = 590.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
 script = ExtResource("1_t825q")
 
-[node name="TilesInGrid" type="Sprite2D" parent="."]
-position = Vector2(579.5, 324.5)
-scale = Vector2(0.608854, 0.613889)
-texture = ExtResource("2_o4cv3")
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.254
+anchor_bottom = 1.095
+offset_left = -32.0
+offset_top = -26.0
+offset_right = 32.3199
+offset_bottom = 33.95
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.415686, 0.415686, 0.415686, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 425.0
+offset_bottom = 361.0
+scale = Vector2(1.5, 1.5)
+
+[node name="MasterVolume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VolumeLabel" type="Label" parent="VBoxContainer/MasterVolume"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Master Volume"
+
+[node name="Volume" type="HSlider" parent="VBoxContainer/MasterVolume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+
+[node name="Music Volume" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer/Music Volume"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Music Volume"
+
+[node name="Music" type="HSlider" parent="VBoxContainer/Music Volume"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="DisplayContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="DisplayLabel" type="Label" parent="VBoxContainer/DisplayContainer"]
+layout_mode = 2
+text = "Display"
+
+[node name="FullScreen" type="Button" parent="VBoxContainer/DisplayContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Fullscreen"
+
+[node name="Window" type="Button" parent="VBoxContainer/DisplayContainer"]
+layout_mode = 2
+text = "Window"
+
+[node name="VSyncContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="VSyncLabel" type="Label" parent="VBoxContainer/VSyncContainer"]
+layout_mode = 2
+text = "V-Sync"
+
+[node name="V-Sync CheckBox" type="CheckBox" parent="VBoxContainer/VSyncContainer"]
+layout_mode = 2
+
+[node name="LanguagContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="LanguageLabel" type="Label" parent="VBoxContainer/LanguagContainer"]
+layout_mode = 2
+text = "Language"
+
+[node name="Latvian" type="Button" parent="VBoxContainer/LanguagContainer"]
+layout_mode = 2
+text = "Latvian"
+
+[node name="English" type="Button" parent="VBoxContainer/LanguagContainer"]
+layout_mode = 2
+text = "English"
+
+[node name="BackButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 9.0
-offset_top = -73.0
-offset_right = 57.0
-offset_bottom = -41.0
+offset_left = 768.0
+offset_top = -33.0
+offset_right = 813.0
+offset_bottom = -2.0
 grow_vertical = 0
 scale = Vector2(2, 2)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
 text = "Back"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ApplyButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -33.0
+offset_right = 2.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+text = "Apply"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[node name="ResetButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = -33.0
+offset_right = 116.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2, 2)
+text = "Reset"
+
+[connection signal="changed" from="VBoxContainer/MasterVolume/Volume" to="." method="_on_volume_changed"]
+[connection signal="changed" from="VBoxContainer/Music Volume/Music" to="." method="_on_music_changed"]
+[connection signal="pressed" from="VBoxContainer/DisplayContainer/FullScreen" to="." method="_on_full_screen_pressed"]
+[connection signal="pressed" from="VBoxContainer/DisplayContainer/Window" to="." method="_on_window_pressed"]
+[connection signal="pressed" from="VBoxContainer/VSyncContainer/V-Sync CheckBox" to="." method="_on_v_sync_check_box_pressed"]
+[connection signal="pressed" from="VBoxContainer/LanguagContainer/Latvian" to="." method="_on_latvian_pressed"]
+[connection signal="pressed" from="VBoxContainer/LanguagContainer/English" to="." method="_on_english_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ApplyButton" to="." method="_on_apply_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

@@ -51,6 +51,10 @@ text = "Options"
 layout_mode = 2
 text = "Quit"
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 323)
+scale = Vector2(0.608854, 0.613889)
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
