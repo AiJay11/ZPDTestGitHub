@@ -28,25 +28,27 @@ func _process(_delta):
 	if dic.has(str(tile)):
 		set_cell(2,tile,2,Vector2i(0,0),0)
 		if Input.is_action_just_pressed("click"):
-			set_cell(1,tile,0,Vector2i(2,1),0)
+			#set_cell(1,tile,0,Vector2i(2,1),0)
+			erase_cell(1,tile)
 			
-func tiles_to_dic(type,atlas,location): # jāizdomā veids kā padarīt modulāru
+func tiles_to_dic(type,source,atlas,location): 
 	dic[str(location)] = {
-				"Type": str(type),
+				"Type": type,
 				"Location": location
 				}
-	set_cell(0,location,0,atlas,0)
+	set_cell(0,location,source,atlas,0)
 	
 func recreate_map():
-	var grass = get_used_cells_by_id(0,0,Vector2i(0,0),0)
-	var water = get_used_cells_by_id(0,0,Vector2i(1,0),0)
-	var mountain = get_used_cells_by_id(0,0,Vector2i(0,1),0)
-	var forrest = get_used_cells_by_id(0,0,Vector2i(1,1),0)
+	var grass = get_used_cells_by_id(0,1,Vector2i(0,0),0)
+	var water = get_used_cells_by_id(0,1,Vector2i(3,0),0)
+	var mountain = get_used_cells_by_id(0,1,Vector2i(2,0),0)
+	var forrest = get_used_cells_by_id(0,1,Vector2i(1,0),0)
 	for tile in grass:
-		tiles_to_dic(grass,Vector2i(0,0),tile)
+		tiles_to_dic("grass",1,Vector2i(0,0),tile)
 	for tile in water:
-		tiles_to_dic(water,Vector2i(1,0),tile)
+		tiles_to_dic("water",1,Vector2i(3,0),tile)
 	for tile in mountain:
-		tiles_to_dic(mountain,Vector2i(0,1),tile)
+		tiles_to_dic("mountain",1,Vector2i(2,0),tile)
 	for tile in forrest:
-		tiles_to_dic(forrest,Vector2i(1,1),tile)
+		tiles_to_dic("forrest",1,Vector2i(1,0),tile)
+

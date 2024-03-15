@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://qwxiged68mh"]
+[gd_scene load_steps=3 format=3 uid="uid://bewrsir7fbxvk"]
 
-[ext_resource type="Texture2D" path="res://assets/walking space.png" id="1_ueqpl"]
+[ext_resource type="Texture2D" uid="uid://b8qa0blghri8t" path="res://assets/walking space.png" id="1_ueqpl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1t1g"]
 

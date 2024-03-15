@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkp8lm30k60ig"]
+[gd_scene load_steps=4 format=3 uid="uid://mbmyv3mtyy7y"]
 
-[ext_resource type="Texture2D" path="res://assets/trans dude.png" id="1_rbjwe"]
+[ext_resource type="Texture2D" uid="uid://c7rhtu1t280a" path="res://assets/trans dude.png" id="1_rbjwe"]
 [ext_resource type="Script" path="res://Scripts/dude.gd" id="1_uw1m1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1t1g"]

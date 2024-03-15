@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://mtui4r4wjgdb"]
+[gd_scene load_steps=4 format=3 uid="uid://mtui4r4wjgdb"]
 
 [ext_resource type="PackedScene" uid="uid://o8ciwo5bckwf" path="res://scenes/tile_map.tscn" id="1_mj2d6"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="2_74113"]
+[ext_resource type="PackedScene" uid="uid://mbmyv3mtyy7y" path="res://scenes/dude.tscn" id="3_dwdt1"]
 
 [node name="Level" type="Node2D"]
 
@@ -10,3 +11,7 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 326)
 script = ExtResource("2_74113")
+
+[node name="dude" parent="." instance=ExtResource("3_dwdt1")]
+position = Vector2(112, 207)
+scale = Vector2(1.495, 1.495)
