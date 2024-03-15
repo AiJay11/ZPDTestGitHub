@@ -1,8 +1,9 @@
+res://scenes/level.tscn
+res://scenes/dude.tscn
+res://Scripts/dude.gd
 res://scenes/Menu.tscn
 res://scenes/Options.tscn
 res://scenes/level_blueprint.tscn
 res://scenes/unit_blueprint.tscn
 res://scenes/tile_map.tscn
-res://scenes/level.tscn
-res://Scripts/Camera2D.gd
-res://Scripts/Options.gd
+res://scenes/detection_square.tscn

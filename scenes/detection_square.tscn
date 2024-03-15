@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://qwxiged68mh"]
+
+[ext_resource type="Texture2D" path="res://assets/walking space.png" id="1_ueqpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1t1g"]
+
+[node name="detection square" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l1t1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, -2.38419e-07)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_ueqpl")
