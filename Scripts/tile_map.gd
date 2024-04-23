@@ -1,5 +1,7 @@
 extends TileMap
 
+
+var dude = load("res://scenes/dude.tscn").instantiate()
 var GrisizeX = 20 #tiek lietots random kartes izveidē
 var GrisizeY = 15 #tiek lietots random kartes izveidē
 var dic = {} #tiek lietots abos kartes izveides gadījumos
@@ -28,7 +30,7 @@ func _process(_delta):
 	if dic.has(str(tile)):
 		set_cell(2,tile,2,Vector2i(0,0),0)
 		if Input.is_action_just_pressed("click"):
-			#set_cell(1,tile,0,Vector2i(2,1),0)
+			
 			erase_cell(1,tile)
 			
 func tiles_to_dic(type,source,atlas,location): 

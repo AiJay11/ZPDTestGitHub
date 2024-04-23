@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713793725
+::res://::1713885964
 icon.svg::CompressedTexture2D::4321848523822970077::1705947115::1713255334::1::::<><>::
 ::res://assets/::1710519455
 newtileset.png::CompressedTexture2D::7751126436081651758::1710519455::1710519455::1::::<><>::
@@ -8,19 +8,19 @@ tile set.png::CompressedTexture2D::8147431442752204521::1708365926::1708365926::
 tiles_in_grid.png::CompressedTexture2D::8296716991426574759::1705951099::1705951099::1::::<><>::
 trans dude.png::CompressedTexture2D::207483494887894430::1710519455::1710519455::1::::<><>::
 walking space.png::CompressedTexture2D::4735727282459592717::1710519455::1710519455::1::::<><>::
-::res://scenes/::1713366093
-detection_square.gd::GDScript::-1::1713366093::0::1::::<>Area2D<>::
-detection_square.tscn::PackedScene::7161672454917374066::1713366093::0::1::::<><>::res://scenes/detection_square.gd<>uid://b8qa0blghri8t::::res://assets/walking space.png
-dude.tscn::PackedScene::7894140132949992754::1713364454::0::1::::<><>::uid://c7rhtu1t280a::::res://assets/trans dude.png<>res://Scripts/dude.gd
-level.tscn::PackedScene::882719477976309511::1713364454::0::1::::<><>::uid://o8ciwo5bckwf::::res://scenes/tile_map.tscn<>res://Scripts/Camera2D.gd<>uid://dkp8lm30k60ig::::res://scenes/dude.tscn
-level_blueprint.tscn::PackedScene::4085543745059313746::1713364454::0::1::::<><>::
-Menu.tscn::PackedScene::8676222929371214320::1713364454::0::1::::<><>::res://Scripts/Menu.gd<>uid://dqg8ymqrwm8f0::::res://assets/tiles_in_grid.png
-Options.tscn::PackedScene::2094009811175184127::1713364454::0::1::::<><>::res://Scripts/Options.gd
-tile_map.tscn::PackedScene::1050905175658653049::1713364454::0::1::::<><>::uid://docxagmp4q2vd::::res://assets/tile set.png<>uid://diox6jpwlb6o5::::res://assets/newtileset.png<>uid://3h8c1wni1xdw::::res://assets/selected tile trans.png<>res://Scripts/tile_map.gd
-unit_blueprint.tscn::PackedScene::3085368259914863776::1713364454::0::1::::<><>::
-::res://Scripts/::1713353096
+::res://scenes/::1713887487
+detection_square.gd::GDScript::-1::1713801068::0::1::::<>Area2D<>::
+detection_square.tscn::PackedScene::7161672454917374066::1713887732::0::1::::<><>::res://scenes/detection_square.gd<>uid://b8qa0blghri8t::::res://assets/walking space.png
+dude.tscn::PackedScene::7894140132949992754::1713887487::0::1::::<><>::uid://c7rhtu1t280a::::res://assets/trans dude.png<>res://Scripts/dude.gd<>uid://dabfx1bpufc8a::::res://scenes/detection_square.tscn
+level.tscn::PackedScene::882719477976309511::1713887487::0::1::::<><>::uid://o8ciwo5bckwf::::res://scenes/tile_map.tscn<>res://Scripts/Camera2D.gd<>uid://dkp8lm30k60ig::::res://scenes/dude.tscn
+level_blueprint.tscn::PackedScene::4085543745059313746::1713887487::0::1::::<><>::
+Menu.tscn::PackedScene::8676222929371214320::1713887487::0::1::::<><>::res://Scripts/Menu.gd<>uid://dqg8ymqrwm8f0::::res://assets/tiles_in_grid.png
+Options.tscn::PackedScene::2094009811175184127::1713887487::0::1::::<><>::res://Scripts/Options.gd
+tile_map.tscn::PackedScene::1050905175658653049::1713887487::0::1::::<><>::uid://docxagmp4q2vd::::res://assets/tile set.png<>uid://diox6jpwlb6o5::::res://assets/newtileset.png<>uid://3h8c1wni1xdw::::res://assets/selected tile trans.png<>res://Scripts/tile_map.gd
+unit_blueprint.tscn::PackedScene::3085368259914863776::1713887487::0::1::::<><>::
+::res://Scripts/::1713886584
 Camera2D.gd::GDScript::-1::1710519217::0::1::::<>Camera2D<>::
-dude.gd::GDScript::-1::1713353096::0::1::::<>Node2D<>::
+dude.gd::GDScript::-1::1713886584::0::1::::<>Node2D<>::
 Menu.gd::GDScript::-1::1710326519::0::1::::<>Control<>::
 Options.gd::GDScript::-1::1710519217::0::1::::<>Control<>::
 tile_map.gd::GDScript::-1::1710519455::0::1::::<>TileMap<>::

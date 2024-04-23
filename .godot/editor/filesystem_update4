@@ -1,10 +1,12 @@
-res://scenes/dude.tscn
 res://scenes/Menu.tscn
 res://scenes/Options.tscn
 res://scenes/level_blueprint.tscn
 res://scenes/unit_blueprint.tscn
 res://scenes/tile_map.tscn
 res://scenes/level.tscn
+res://scenes/dude.tscn
 res://scenes/detection_square.tscn
 res://Scripts/dude.gd
-res://scenes/detection_square.gd
+res://scenes/ui.tscn
+res://Scripts/UI.gd
+res://Scripts/tile_map.gd

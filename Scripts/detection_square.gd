@@ -13,4 +13,3 @@ func _process(_delta):
 func _input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("click"):
 		emit_signal("move_here",position)
-		print("clicked")
