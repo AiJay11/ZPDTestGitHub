@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713947799
+::res://::1713983759
+default_bus_layout.tres::AudioBusLayout::7684033810682717263::1713979921::0::1::::<><>::
 icon.svg::CompressedTexture2D::4321848523822970077::1705943419::1713886203::1::::<><>::
 ::res://assets/::1713968342
 newtileset.png::CompressedTexture2D::7751126436081651758::1713886177::1713886177::1::::<><>::
@@ -8,22 +9,24 @@ tile set.png::CompressedTexture2D::8147431442752204521::1710499778::1710499778::
 tiles_in_grid.png::CompressedTexture2D::8296716991426574759::1705947010::1705950786::1::::<><>::
 trans dude.png::CompressedTexture2D::207483494887894430::1713886177::1713886177::1::::<><>::
 walking space.png::CompressedTexture2D::4735727282459592717::1713886177::1713886177::1::::<><>::
-::res://assets/Music/::1713968355
+::res://assets/Music/::1713968363
 Grid_fighters_v2.mp3::AudioStreamMP3::8486184019759855595::1713968293::1713968363::1::::<><>::
 my_lord.mp3::AudioStreamMP3::2960855299328645883::1713968349::1713968363::1::::<><>::
-::res://scenes/::1713968076
-detection_square.gd::GDScript::-1::1713886177::0::1::::<>Area2D<>::
-detection_square.tscn::PackedScene::7161672454917374066::1713968076::0::1::::<><>::res://scenes/detection_square.gd<>uid://b8qa0blghri8t::::res://assets/walking space.png
-dude.tscn::PackedScene::7894140132949992754::1713968076::0::1::::<><>::uid://c7rhtu1t280a::::res://assets/trans dude.png<>res://Scripts/dude.gd<>uid://dabfx1bpufc8a::::res://scenes/detection_square.tscn
-level.tscn::PackedScene::882719477976309511::1713968076::0::1::::<><>::uid://o8ciwo5bckwf::::res://scenes/tile_map.tscn<>res://Scripts/Camera2D.gd<>uid://dkp8lm30k60ig::::res://scenes/dude.tscn
-level_blueprint.tscn::PackedScene::4085543745059313746::1713968076::0::1::::<><>::
-Menu.tscn::PackedScene::8676222929371214320::1713968076::0::1::::<><>::res://Scripts/Menu.gd<>uid://dqg8ymqrwm8f0::::res://assets/tiles_in_grid.png
-Options.tscn::PackedScene::2094009811175184127::1713968076::0::1::::<><>::res://Scripts/Options.gd
-tile_map.tscn::PackedScene::1050905175658653049::1713968076::0::1::::<><>::uid://docxagmp4q2vd::::res://assets/tile set.png<>uid://diox6jpwlb6o5::::res://assets/newtileset.png<>uid://3h8c1wni1xdw::::res://assets/selected tile trans.png<>res://Scripts/tile_map.gd
-unit_blueprint.tscn::PackedScene::3085368259914863776::1713968076::0::1::::<><>::
-::res://Scripts/::1713968005
+::res://scenes/::1713983701
+detection_square.tscn::PackedScene::7161672454917374066::1713983701::0::1::::<><>::res://Scripts/detection_square.gd<>uid://b8qa0blghri8t::::res://assets/walking space.png
+dude.tscn::PackedScene::7894140132949992754::1713983179::0::1::::<><>::uid://c7rhtu1t280a::::res://assets/trans dude.png<>res://Scripts/dude.gd<>uid://dabfx1bpufc8a::::res://scenes/detection_square.tscn
+level.tscn::PackedScene::882719477976309511::1713983701::0::1::::<><>::uid://o8ciwo5bckwf::::res://scenes/tile_map.tscn<>res://Scripts/Camera2D.gd<>uid://cnk4nrqjdvass::::res://scenes/ui.tscn
+level_blueprint.tscn::PackedScene::4085543745059313746::1713983179::0::1::::<><>::
+Menu.tscn::PackedScene::8676222929371214320::1713983179::0::1::::<><>::res://Scripts/Menu.gd<>uid://dqg8ymqrwm8f0::::res://assets/tiles_in_grid.png
+Options.tscn::PackedScene::2094009811175184127::1713983559::0::1::::<><>::res://Scripts/Options.gd
+tile_map.tscn::PackedScene::1050905175658653049::1713983179::0::1::::<><>::uid://docxagmp4q2vd::::res://assets/tile set.png<>uid://diox6jpwlb6o5::::res://assets/newtileset.png<>uid://3h8c1wni1xdw::::res://assets/selected tile trans.png<>res://Scripts/tile_map.gd
+ui.tscn::PackedScene::5707725038359788910::1713983701::0::1::::<><>::res://Scripts/UI.gd
+unit_blueprint.tscn::PackedScene::3085368259914863776::1713983179::0::1::::<><>::
+::res://Scripts/::1713983701
 Camera2D.gd::GDScript::-1::1710500021::0::1::::<>Camera2D<>::
-dude.gd::GDScript::-1::1713886177::0::1::::<>Node2D<>::
+detection_square.gd::GDScript::-1::1713983701::0::1::::<>Area2D<>::
+dude.gd::GDScript::-1::1713983701::0::1::::<>Node2D<>::
 Menu.gd::GDScript::-1::1713886176::0::1::::<>Control<>::
-Options.gd::GDScript::-1::1713968005::0::1::::<>Control<>::
-tile_map.gd::GDScript::-1::1713886177::0::1::::<>TileMap<>::
+Options.gd::GDScript::-1::1713982104::0::1::::<>Control<>::
+tile_map.gd::GDScript::-1::1713983701::0::1::::<>TileMap<>::
+UI.gd::GDScript::-1::1713983701::0::1::::<>Control<>::

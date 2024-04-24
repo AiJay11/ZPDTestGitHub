@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnk4nrqjdvass"]
+
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_o42bu"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -578.0
+offset_top = -326.0
+offset_right = 577.0
+offset_bottom = 323.0
+mouse_filter = 1
+script = ExtResource("1_o42bu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 562.0
+offset_right = 1137.0
+offset_bottom = 639.0
+
+[node name="dude" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "dude"
+
+[node name="house" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "house"
+
+[node name="Button3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="next turn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "next turn"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 971.0
+offset_top = 10.0
+offset_right = 1144.0
+offset_bottom = 87.0
+
+[node name="options" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Options"
+
+[node name="menu" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Menu"
+
+[node name="quit" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="HBoxContainer2/quit" to="." method="_on_quit_pressed"]
