@@ -2,7 +2,7 @@ extends Control
 
 
 @onready var MASTERVOLUME_BUS_ID = AudioServer.get_bus_index("MasterVolume")
-@onready var full_screen_check_box =$FullScreen_CheckBox
+#@onready var full_screen_check_box =$FullScreen_CheckBox
 
 
 func _on_full_screen_check_box_toggled(toggled_on):

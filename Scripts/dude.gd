@@ -13,7 +13,6 @@ func _ready():
 	$d6.connect("move_here",move)
 	$d7.connect("move_here",move)
 	$d8.connect("move_here",move)
-	print("alive")
 	#for x in deez:
 		#x.connect("move_here",move)
 
@@ -52,5 +51,5 @@ func _on_area_2d_input_event(_viewport, _event, _shape_idx):
 			show_deez()
 
 func move(cords):
-	position += cords*2
+	position += cords
 	hide_deez()

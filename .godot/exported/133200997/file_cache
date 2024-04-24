@@ -1,0 +1,10 @@
+res://scenes/detection_square.tscn::4777c67217549c75ce12e7ae94439b11::1713984266::res://.godot/exported/133200997/export-ed0aca4c3b33853b5f797ffb105c4717-detection_square.scn
+res://scenes/dude.tscn::0cb4618265542ef1c00e7b46cb6b64d3::1713984266::res://.godot/exported/133200997/export-897183f4dc6cd75bb113957498068b80-dude.scn
+res://scenes/level.tscn::00a82e852b114347be004bd49575dbec::1713984266::res://.godot/exported/133200997/export-a0631f9feb269b9ee464fe0e4794e617-level.scn
+res://scenes/level_blueprint.tscn::9745618066add5e09d9847dafada6a06::1713984266::res://.godot/exported/133200997/export-8e76aed6ef6957e79463b0e871277a45-level_blueprint.scn
+res://scenes/Menu.tscn::850bc9dedb9c59c935372fd95349982c::1713984266::res://.godot/exported/133200997/export-8e836f4621de545031f781562e7b3b7d-Menu.scn
+res://scenes/Options.tscn::81e2930fac53543d5bc7e9b703411768::1713984266::res://.godot/exported/133200997/export-528c4f67d89aa5f0a40bd666453635bd-Options.scn
+res://scenes/tile_map.tscn::09cb3f22fd3c6fea07d2d6e498c70e20::1713984266::res://.godot/exported/133200997/export-ce269969b9a807b5cc5b406a10a1234a-tile_map.scn
+res://scenes/ui.tscn::51a64062d052a2d24a0bde06b9ef2893::1713984266::res://.godot/exported/133200997/export-9211dc52ac9df169ba4fe77cbc1dc833-ui.scn
+res://scenes/unit_blueprint.tscn::2c7cf41493da4cea45821a7fda57035e::1713984266::res://.godot/exported/133200997/export-1078b86535a971a42a9685245e1f9360-unit_blueprint.scn
+res://default_bus_layout.tres::6e043205534ca70a64c19dc55ff8865f::1713983988::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

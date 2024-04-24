@@ -1,10 +1,12 @@
 extends TileMap
 
+@export var unit_scene: PackedScene
 
 var dude = load("res://scenes/dude.tscn").instantiate()
 var GrisizeX = 20 #tiek lietots random kartes izveidē
 var GrisizeY = 15 #tiek lietots random kartes izveidē
 var dic = {} #tiek lietots abos kartes izveides gadījumos
+var selected_placable = 0
 
 func _ready():
 	if get_used_cells(0) == []:
@@ -29,10 +31,18 @@ func _process(_delta):
 	
 	if dic.has(str(tile)):
 		set_cell(2,tile,2,Vector2i(0,0),0)
+		
 		if Input.is_action_just_pressed("click"):
-			
 			erase_cell(1,tile)
 			
+			if get_parent().selected_placable == 1:
+				var unit = unit_scene.instantiate()
+				var unit_location = tile * 32 + Vector2i(16,16)
+				unit.position = unit_location
+				add_child(unit)
+				get_parent().selected_placable = 0
+
+
 func tiles_to_dic(type,source,atlas,location): 
 	dic[str(location)] = {
 				"Type": type,
@@ -53,4 +63,5 @@ func recreate_map():
 		tiles_to_dic("mountain",1,Vector2i(2,0),tile)
 	for tile in forrest:
 		tiles_to_dic("forrest",1,Vector2i(1,0),tile)
+
 
