@@ -27,9 +27,9 @@ color = Color(0.415686, 0.415686, 0.415686, 1)
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 offset_left = 26.0
-offset_top = 19.0
+offset_top = 67.0
 offset_right = 425.0
-offset_bottom = 361.0
+offset_bottom = 344.0
 scale = Vector2(1.5, 1.5)
 
 [node name="MasterVolume" type="HBoxContainer" parent="VBoxContainer"]
@@ -41,41 +41,24 @@ layout_mode = 2
 size_flags_horizontal = 2
 text = "Master Volume"
 
-[node name="Volume" type="HSlider" parent="VBoxContainer/MasterVolume"]
+[node name="HSlider" type="HSlider" parent="VBoxContainer/MasterVolume"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
-
-[node name="Music Volume" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 2
-
-[node name="MusicLabel" type="Label" parent="VBoxContainer/Music Volume"]
-layout_mode = 2
-size_flags_horizontal = 2
-text = "Music Volume"
-
-[node name="Music" type="HSlider" parent="VBoxContainer/Music Volume"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
+max_value = 1.0
+step = 0.001
+value = 0.8
 
 [node name="DisplayContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 2
 
-[node name="DisplayLabel" type="Label" parent="VBoxContainer/DisplayContainer"]
+[node name="FullScreen" type="Label" parent="VBoxContainer/DisplayContainer"]
 layout_mode = 2
-text = "Display"
+text = "FullScreen"
 
-[node name="FullScreen" type="Button" parent="VBoxContainer/DisplayContainer"]
+[node name="FullScreenCheckBox" type="CheckBox" parent="VBoxContainer/DisplayContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
-text = "Fullscreen"
-
-[node name="Window" type="Button" parent="VBoxContainer/DisplayContainer"]
-layout_mode = 2
-text = "Window"
 
 [node name="VSyncContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
@@ -88,51 +71,18 @@ text = "V-Sync"
 [node name="V-Sync CheckBox" type="CheckBox" parent="VBoxContainer/VSyncContainer"]
 layout_mode = 2
 
-[node name="LanguagContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-
-[node name="LanguageLabel" type="Label" parent="VBoxContainer/LanguagContainer"]
-layout_mode = 2
-text = "Language"
-
-[node name="Latvian" type="Button" parent="VBoxContainer/LanguagContainer"]
-layout_mode = 2
-text = "Latvian"
-
-[node name="English" type="Button" parent="VBoxContainer/LanguagContainer"]
-layout_mode = 2
-text = "English"
-
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 768.0
+offset_left = 880.0
 offset_top = -33.0
-offset_right = 813.0
+offset_right = 925.0
 offset_bottom = -2.0
 grow_vertical = 0
 scale = Vector2(2, 2)
 text = "Back"
-
-[node name="ApplyButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -50.0
-offset_top = -33.0
-offset_right = 2.0
-offset_bottom = -2.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(2, 2)
-text = "Apply"
 
 [node name="ResetButton" type="Button" parent="."]
 layout_mode = 1
@@ -150,13 +100,14 @@ grow_vertical = 0
 scale = Vector2(2, 2)
 text = "Reset"
 
-[connection signal="changed" from="VBoxContainer/MasterVolume/Volume" to="." method="_on_volume_changed"]
-[connection signal="changed" from="VBoxContainer/Music Volume/Music" to="." method="_on_music_changed"]
-[connection signal="pressed" from="VBoxContainer/DisplayContainer/FullScreen" to="." method="_on_full_screen_pressed"]
-[connection signal="pressed" from="VBoxContainer/DisplayContainer/Window" to="." method="_on_window_pressed"]
+[node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="toggled" from="VBoxContainer/DisplayContainer/FullScreenCheckBox" to="." method="_on_full_screen_check_box_toggled"]
 [connection signal="pressed" from="VBoxContainer/VSyncContainer/V-Sync CheckBox" to="." method="_on_v_sync_check_box_pressed"]
-[connection signal="pressed" from="VBoxContainer/LanguagContainer/Latvian" to="." method="_on_latvian_pressed"]
-[connection signal="pressed" from="VBoxContainer/LanguagContainer/English" to="." method="_on_english_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="ApplyButton" to="." method="_on_apply_button_pressed"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]

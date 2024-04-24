@@ -1,3 +1,8 @@
+Control
+HBoxContainer
+Label
+AudioStreamPlayer
+CheckBox
 Sprite2D
 AnimationPlayer
 Area2D
@@ -5,18 +10,6 @@ CollisionShape2D
 Button
 HSlider
 ColorRect
-Label
-CheckBox
-HBoxContainer
 VBoxContainer
 MarginContainer
 VBoxContainer
-TextureRect
-Node2D
-Window
-TabBar
-TabContainer
-Control
-Popup
-Camera2D
-TileMap
